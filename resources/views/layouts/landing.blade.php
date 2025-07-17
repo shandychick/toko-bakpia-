@@ -225,7 +225,7 @@
 
   {{-- Footer --}}
   <footer>
-    <img src="{{ asset('images/bakpia2.jpg') }}" alt="Bakpia">
+    <img src="{{ asset('images/bakpia_bg.jpg') }}" alt="Bakpia">
     <p class="fw-bold">BAKPIA 5555</p>
     <p>0821-1234-5555 | bakpia5555@email.com</p>
     <p>Jl. Imogiri Timur KM 10, Bantul, Yogyakarta</p>
