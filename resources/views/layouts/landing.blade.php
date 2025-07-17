@@ -52,13 +52,14 @@
     }
 
     .hero {
-      background-color: var(--hijau-muda);
-      padding-top: 120px;
-      padding-bottom: 60px;
-      position: relative;
-      text-align: center;
-      clip-path: ellipse(100% 80% at 50% 0%);
-    }
+  background-color: var(--hijau-muda);
+  padding-top: 120px;
+  padding-bottom: 100px; /* ✅ ditambah supaya teks tidak ketimpa */
+  position: relative;
+  text-align: center;
+  clip-path: ellipse(100% 90% at 50% 0%); /* ✅ diturunkan sedikit */
+}
+
 
     .hero img {
       width: 200px;
@@ -72,11 +73,13 @@
     }
 
     .hero p {
-      font-size: 16px;
-      color: #333;
-      max-width: 600px;
-      margin: auto;
-    }
+  font-size: 16px;
+  color: #333;
+  max-width: 600px;
+  margin: 10px auto 0; /* ✅ jarak atas & tengah rapi */
+  line-height: 1.6;     /* ✅ biar lebih enak dibaca */
+}
+
 
     section {
       padding: 60px 20px;
