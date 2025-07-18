@@ -3,8 +3,8 @@
 @section('content')
 <div class="container">
     {{-- Heading --}}
-    <div class="card mb-4 shadow">
-        <div class="card-header bg-primary text-white">
+    <div class="card mb-4 shadow" style="background-color: #6D942C;">
+        <div class="card-header text-white" style="background-color: #6D942C;">
             <h4 class="mb-0">🧾 Kasir - Transaksi Bakpia</h4>
         </div>
     </div>
@@ -14,8 +14,8 @@
         <div class="col-md-5">
             {{-- Form --}}
             <div class="card shadow-sm mb-3">
-                <div class="card-header bg-secondary text-white">📝 Input Produk</div>
-                <div class="card-body">
+                <div class="card-header text-white" style="background-color: #6D942C;">📝 Input Produk</div>
+                <div class="card-body" style="background-color: #ffffff;">
                     <form method="POST" action="{{ route('kasir.add') }}" onkeypress="return enterSubmit(event)">
                         @csrf
                         <div class="mb-3">
@@ -38,7 +38,7 @@
                             <label for="jumlah">Jumlah:</label>
                             <input type="number" name="jumlah" id="jumlah" class="form-control" min="1" required>
                         </div>
-                        <button type="submit" class="btn btn-success w-100">+ Tambah ke Keranjang</button>
+                        <button type="submit" class="btn text-white w-100" style="background-color: #6D942C;">+ Tambah ke Keranjang</button>
                     </form>
                 </div>
             </div>
@@ -46,10 +46,10 @@
             {{-- Keranjang --}}
             @if(session('cart'))
             <div class="card shadow-sm mb-4">
-                <div class="card-header bg-success text-white">🛒 Keranjang Belanja</div>
-                <div class="card-body p-0">
+                <div class="card-header text-white" style="background-color: #6D942C;">🛒 Keranjang Belanja</div>
+                <div class="card-body p-0" style="background-color: #ffffff;">
                     <table class="table table-sm table-bordered mb-0">
-                        <thead class="table-light">
+                        <thead style="background-color: #ABD673;">
                             <tr>
                                 <th>Nama</th>
                                 <th>Jumlah</th>
@@ -68,17 +68,17 @@
                                     <td>Rp{{ number_format($subtotal) }}</td>
                                 </tr>
                             @endforeach
-                            <tr class="table-primary">
+                            <tr style="background-color: #ABD673;">
                                 <td colspan="3"><strong>Total</strong></td>
                                 <td><strong>Rp{{ number_format($total) }}</strong></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="card-footer d-flex justify-content-between">
+                <div class="card-footer d-flex justify-content-between" style="background-color: #ffffff;">
                     <form action="{{ route('kasir.checkout') }}" method="POST">
                         @csrf
-                        <button class="btn btn-primary">💳 Bayar</button>
+                        <button class="btn text-white" style="background-color: #6D942C;">💳 Bayar</button>
                     </form>
                     <form action="{{ route('kasir.reset') }}" method="POST">
                         @csrf
@@ -92,13 +92,13 @@
         {{-- Daftar Produk --}}
         <div class="col-md-7">
             <div class="card shadow-sm">
-                <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+                <div class="card-header text-white d-flex justify-content-between align-items-center" style="background-color: #6D942C;">
                     <span>📦 Daftar Produk</span>
                     <input type="text" id="searchInput" onkeyup="filterProduk()" class="form-control w-50" placeholder="Cari produk...">
                 </div>
-                <div class="card-body p-0">
+                <div class="card-body p-0" style="background-color: #ffffff;">
                     <table class="table table-hover table-bordered mb-0" id="produkTable">
-                        <thead class="table-light">
+                        <thead style="background-color: #ABD673;">
                             <tr>
                                 <th>ID</th>
                                 <th>Nama</th>
